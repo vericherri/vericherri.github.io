@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "ut";
+  src: url("./src/fonts/undertale-font-rus-eng.ttf") format("truetype");
+}
+
+body {
+  font-family: "ut";
+  font-size: 24px;
+  background-color: beige;
+  transition: background-color 0.5s;
+}
+
+body.new-color {
+  background-color: black;
+}
+
+#repent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  color: beige;
+  transition: opacity 2s linear;
+}
+
+#repent.disappear {
+  opacity: 0;
+}
+
+.bao {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  position: relative;
+  z-index: 2;
+
+  border: 5px solid blue;
+  transform-origin: center;
+  transition: transform 0.5s ease, border-color 0.5s ease, opacity 0.5s ease;
+}
+
+.bao2 {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -655px;
+  z-index: 1;
+
+  transform-origin: center;
+  transition: transform 2500s linear, opacity 2s linear;
+}
+
+.bao:hover {
+  transform: scale(1.01);
+  border-color: blueviolet;
+}
+
+.bao2:hover {
+  transform: scale(1.01);
+}
+
+.bao.disappear {
+  opacity: 0;
+}
+
+.bao2.grow {
+  transform: scale(5);
+}
